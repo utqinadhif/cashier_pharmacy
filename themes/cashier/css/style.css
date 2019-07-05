@@ -1,0 +1,29 @@
+@import url('../../default/bootstrap/css/bootstrap.min.css');
+@import url('../../default/fontawesome/css/all.min.css');
+
+@import url('../src/ionicons/css/ionicons.min.css');
+@import url('../src/adminlte2/css/AdminLTE.min.css');
+@import url('../src/adminlte2/css/skins/_all-skins.min.css');
+/*@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic');*/
+
+.no_radius {
+	border-radius: 0 !important;
+}
+.main-header .sidebar-toggle:before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f0c9";
+}
+.ellipsis {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row.display-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
