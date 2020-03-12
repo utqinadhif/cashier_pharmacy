@@ -45,16 +45,6 @@ class MX_Router extends CI_Router
 		return $this->module;
 	}
 
-	public function fetch_class()
-	{
-		return $this->class;
-	}
-
-	public function fetch_method()
-	{
-		return $this->method;
-	}
-
 	protected function _set_request($segments = array())
 	{
 		if ($this->translate_uri_dashes === TRUE)
@@ -245,8 +235,8 @@ class MX_Router extends CI_Router
 
 	public function set_class($class)
 	{
-		$suffix = $this->config->item('controller_suffix');
-		if (strpos($class, $suffix) === FALSE)
+		$suffix = (string) $this->config->item('controller_suffix');
+		if ($suffix && strpos($class, $suffix) === FALSE)
 		{
 			$class .= $suffix;
 		}
